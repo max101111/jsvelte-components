@@ -1,5 +1,9 @@
 <script>
-	import { First } from '$lib';
+	import { First, Table } from '$lib';
 </script>
 
-<First name="World" textColor="yellowgreen" />
+<div data-theme="light">
+	<First name="World" textColor="yellowgreen" />
+
+	<Table />
+</div>

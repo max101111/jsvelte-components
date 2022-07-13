@@ -6,6 +6,7 @@
         "@storybook/addon-actions": "6.5.9",
         "@storybook/addon-essentials": "6.5.9",
         "@storybook/addon-links": "6.5.9",
+        "@storybook/addon-postcss": "^2.0.0",
         "@storybook/addon-storyshots": "6.5.9",
         "@storybook/addon-svelte-csf": "2.0.5",
         "@storybook/svelte": "6.5.9",
@@ -16,6 +17,7 @@
         "babel-loader": "8.2.5",
         "chromatic": "6.7.0",
         "eslint": "8.19.0",
+        "cypress": "9.7.0",
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-cypress": "2.12.1",
         "eslint-plugin-svelte3": "4.0.0",
@@ -30,6 +32,10 @@
         "svelte-preprocess": "4.10.7",
         "svelte2tsx": "0.5.11",
         "tslib": "2.4.0",
+        "daisyui": "^2.19.0",
+        "postcss": "^8.4.14",
+        "tailwindcss": "^3.1.6",
+        "vite": "^2.9.14",
         "typescript": "4.7.4"
     },
     "homepage": "~TODO~",
@@ -67,9 +73,6 @@
         "test": "start-server-and-test storybook http://localhost:6006 cy:run"
     },
     "type": "module",
-    "version": "0.0.1",
-    "main": "index.js",
-    "dependencies": {
-        "vite": "^2.9.14"
-    }
+    "version": "0.0.5",
+    "main": "index.js"
 }
