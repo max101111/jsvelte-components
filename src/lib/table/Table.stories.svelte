@@ -4,7 +4,16 @@
 </script>
 
 <!-- 👇 Creates specific parameters for the story -->
-<Meta title="Components/Table" component={Table} argTypes={{}} />
+<Meta
+	title="Components/Table"
+	component={Table}
+	argTypes={{}}
+	parameters={{
+		docs: {
+			data: '456456',
+		},
+	}}
+/>
 
 <Template let:args>
 	<Table {...args} />
@@ -22,5 +31,6 @@
 			{ dataIndex: 'job', title: 'JOB' },
 			{ dataIndex: 'color', title: 'Favorite Color' },
 		],
+		pagination: { total: 20, current: 10 },
 	}}
 />

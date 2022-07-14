@@ -1,6 +1,8 @@
 <script>
+	import Pagination from '$lib/pagination/Pagination.svelte';
 	export let data = [];
 	export let column = [];
+	export let pagination;
 </script>
 
 <div class="overflow-x-auto">
@@ -23,4 +25,7 @@
 			{/each}
 		</tbody>
 	</table>
+	{#if pagination}
+		<Pagination on:paginationChange {...pagination} />
+	{/if}
 </div>
