@@ -1,5 +1,17 @@
 const preprocess = require('svelte-preprocess');
 
+
+
+const sveltekitAlias = (config) => {
+  // Set SvelteKit aliases.
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    svelte: `${__dirname}/../node_modules/svelte`,
+    $lib: `${__dirname}/../src/lib`,
+  };
+  return config;
+};
+
 module.exports = {
 	stories: [
 		'./**/*.stories.mdx',
@@ -26,5 +38,9 @@ module.exports = {
 	],
 	svelteOptions: {
 		preprocess: preprocess(),
-	},
+  },
+  webpackFinal: async (config) => {
+    config = sveltekitAlias(config);
+    return config;
+  },
 };
